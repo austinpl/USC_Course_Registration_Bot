@@ -37,3 +37,18 @@ While the course registration bot is designed to automate the registration proce
 * A local PC cannot reliably run 24/7 without interruptions due to power outages, system updates, or hardware failures.
 * Local machines may struggle with resource-intensive tasks, leading to slower performance and increased latency during peak registration times.
 * Home networks are often less stable and secure than cloud-based networks, leading to potential connectivity issues.
+
+On the other hand, deploying the course registration bot on AWS EC2 provides numerous benefits over running it on a local PC:
+* With EC2, the bot can operate 24/7 without the risk of interruptions or failures caused by power outages or system updates, ensuring continuous monitoring for course openings.
+* EC2 instances deliver more efficient computing resources, allowing the bot to perform tasks with greater speed and reduced latency, especially during peak registration times.
+* USC students can take advantage of AWS's free tier, which offers free EC2 usage for a year, making this a cost-effective solution for maintaining and running the bot seamlessly.
+
+#### I won't go into the specifics on how to integrate the bot with EC2, but if you are interested in doing so, feel free to reach out.
+
+## Important Note About Duo Mobile 2FA
+Integrating Duo Mobile's two-factor authentication (2FA) into the automation process presents a challenge, as it requires users to authenticate themselves through a mobile app, which is beyond the capabilities of Selenium. Although the bot runs continuously 24/7, server-side interruptions may occasionally require users to reauthenticate, typically 1-3 times per day based on personal experience.
+
+If you plan to use this bot, it's crucial to be aware of the need for timely Duo Mobile authentication. Failure to respond to constant authentication requests may prompt a password change by USC Administration. To ensure smooth operation, keep your mobile device accessible and be prepared to complete the authentication process whenever prompted.
+
+## Tools
+Python, Selenium, AWS EC2
