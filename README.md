@@ -45,10 +45,13 @@ On the other hand, deploying the course registration bot on AWS EC2 provides num
 
 #### I won't go into the specifics on how to integrate the bot with EC2, but if you are interested in doing so, feel free to reach out.
 
-## Important Note About Duo Mobile 2FA
+## Limitations
+### Duo 2FA
 Integrating Duo Mobile's two-factor authentication (2FA) into the automation process presents a challenge, as it requires users to authenticate themselves through a mobile app, which is beyond the capabilities of Selenium. Although the bot runs continuously 24/7, server-side interruptions may occasionally require users to reauthenticate, typically 1-3 times per day based on personal experience.
 
 If you plan to use this bot, it's crucial to be aware of the need for timely Duo Mobile authentication. Failure to respond to constant authentication requests may prompt a password change by USC Administration. To ensure smooth operation, keep your mobile device accessible and be prepared to complete the authentication process whenever prompted.
+### The Current Version Only Supports Registering for One Class at a Time
+I built this bot primarily to secure a spot in a class that gradually opened up spots over the summer. Consequently, the bot is tailored to my specific needs and is programmed to check only if the first class at the top of your CourseBin has an open spot. This could be problematic if you need to register for multiple classes simultaneously, as the bot won't detect if any classes below the top class are closed, leading to potential malfunctions. If there is enough interest and demand for a version that supports general course registration, I will update the bot accordingly.
 
 ## Tools
 Python, Selenium, AWS EC2
