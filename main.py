@@ -31,8 +31,8 @@ while not success:
     login = False
 
     # Login info (insert your own here)
-    username = ''
-    password = ''
+    username = 'austinpl'
+    password = 'Gamer04052004!!!'
 
     # LOGIN LOOP (KEEP LOOPING UNTIL SUCCESS)
     while not login:
@@ -42,10 +42,10 @@ while not success:
         try:
             # Wait until login button shows up
             user_wait = WebDriverWait(driver, 30).until(
-                EC.presence_of_element_located((By.ID, "username"))
+                EC.presence_of_element_located((By.ID, "netid"))
             )
             print('User form found.')
-            username_field = driver.find_element(By.ID, "username")
+            username_field = driver.find_element(By.ID, "netid")
             password_field = driver.find_element(By.ID, "password")
             username_field.send_keys(username)
             password_field.send_keys(password)
