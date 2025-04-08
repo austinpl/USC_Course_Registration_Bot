@@ -31,8 +31,8 @@ while not success:
     login = False
 
     # Login info (insert your own here)
-    username = 'austinpl'
-    password = 'Gamer04052004!!!'
+    username = ''
+    password = ''
 
     # LOGIN LOOP (KEEP LOOPING UNTIL SUCCESS)
     while not login:
